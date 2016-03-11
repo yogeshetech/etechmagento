@@ -33,17 +33,35 @@
 
 <?php if (count($_links) > 0): ?>
     <ul class="links"<?php if ($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif; ?>>
-        <?php foreach ($_links as $_link): ?>
-            <?php if ($_link instanceof Mage_Core_Block_Abstract): ?>
 
-                <?php echo $_link->toHtml() ?>
-            <?php else: ?>
-                <li  <?php if ($_link->getIsFirst() || $_link->getIsLast()): ?> class="<?php if ($_link->getIsFirst()): ?>first<?php endif; ?><?php if ($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?> id="<?php echo $_link->getTitle() . '1'; ?>" >
+        <li>
+            <img src="<?php echo $this->getSkinUrl('images/user.png') ?>">
+            <a href="<?php echo $this->getUrl('customer/account') ?>"><?php echo $this->__('Account') ?></a>  
 
+        </li>
 
-                    <?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>> <img src="<?php echo $this->getSkinUrl('images/user.png') ?>" alt="" > <?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
-            <?php endif; ?>
-        <?php endforeach; ?>
+        <li class="wishlist">
+            <img src="<?php echo $this->getSkinUrl('images/wishlist.png') ?>">
+            <a href="<?php echo $this->getUrl('wishlist') ?>"><?php echo $this->__('Wishlist') ?></a>
+        </li>
+
+        <li>
+              <img src="<?php echo $this->getSkinUrl('images/chakra.png') ?>">
+            <a href="<?php echo $this->getUrl('checkout') ?>"><?php echo $this->__('Checkout') ?></a>
+        </li>
+        <li class="cart">
+            <img src="<?php echo $this->getSkinUrl('images/cart.png') ?>">
+            <a href="<?php echo $this->getUrl('checkout/cart') ?>"><?php echo $this->__('Cart') ?></a>
+        </li>
+        <li class="login">
+            <img src="<?php echo $this->getSkinUrl('images/login.png') ?>">
+            <a href="<?php echo $this->getUrl('customer/account/login') ?>"><?php echo $this->__('Login') ?></a >
+        </li>
+
     </ul>
 <?php endif; ?>
+<ul >
 
+
+
+</ul>
