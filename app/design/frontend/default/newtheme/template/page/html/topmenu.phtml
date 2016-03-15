@@ -36,7 +36,7 @@
     <div class="nav-container">
         <ul id="nav">
 
-            <li>
+            <li class="nav-home">
                 <a href="<?php echo $this->getUrl('') ?>">
                     <?php echo $this->__('Home'); ?>
                 </a>
@@ -45,12 +45,14 @@
                 <a href="<?php echo $this->getUrl('electronics.html') ?>">
                     <?php echo $this->__('Shop'); ?>
                 </a>
+                <img src="<?php echo $this->getSkinUrl('images/newdown.png') ?>">
             </li>
 
             <li>
                 <a href="<?php echo $this->getUrl('') ?>">
                     <?php echo $this->__('Blog'); ?>
                 </a>
+                <img src="<?php echo $this->getSkinUrl('images/newdown.png') ?>">
             </li>
             <?php //echo $_menu ?>
 
@@ -59,10 +61,17 @@
                     <?php echo $this->__('404'); ?>
                 </a>
             </li>
-            <li>
+            <li class="nav-contact">
                 <a href="<?php echo $this->getUrl('customer-service') ?>">
                     <?php echo $this->__('Contact'); ?>
                 </a>
+            </li>
+            <li class="search">
+                <input type="text" name="first_name" placeholder=" <?php echo $this->__('Search'); ?>" value="" class="input-text required-entry">
+                <button class="newsearch" data-toggle="dropdown" type="button">
+
+                    <a href=""><img src="<?php echo $this->getSkinUrl('images/seach.png') ?>" alt="" > </a>
+                </button> 
             </li>
 
         </ul>
