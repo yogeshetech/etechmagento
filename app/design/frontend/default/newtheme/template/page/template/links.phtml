@@ -24,6 +24,7 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+
 <?php
 /**
  * @see Mage_Page_Block_Template_Links
@@ -34,8 +35,8 @@
 <?php if (count($_links) > 0): ?>
     <ul class="links"<?php if ($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif; ?>>
 
-        <li>
-            <img src="<?php echo $this->getSkinUrl('images/user.png') ?>">
+        <li class="user">
+            <img src="<?php echo $this->getSkinUrl('images/user2.png') ?>">
             <a href="<?php echo $this->getUrl('customer/account') ?>"><?php echo $this->__('Account') ?></a>  
 
         </li>
@@ -45,16 +46,16 @@
             <a href="<?php echo $this->getUrl('wishlist') ?>"><?php echo $this->__('Wishlist') ?></a>
         </li>
 
-        <li>
-            <img src="<?php echo $this->getSkinUrl('images/chakra.png') ?>">
+        <li  class="checkout">
+            <img src="<?php echo $this->getSkinUrl('images/chakra2.png') ?>">
             <a href="<?php echo $this->getUrl('checkout') ?>"><?php echo $this->__('Checkout') ?></a>
         </li>
         <li class="cart">
-            <img src="<?php echo $this->getSkinUrl('images/cart.png') ?>">
+            <img src="<?php echo $this->getSkinUrl('images/cart2.png') ?>">
             <a href="<?php echo $this->getUrl('checkout/cart') ?>"><?php echo $this->__('Cart') ?></a>
         </li>
         <li class="login">
-            <img src="<?php echo $this->getSkinUrl('images/login.png') ?>">
+            <img src="<?php echo $this->getSkinUrl('images/login2.png') ?>">
             <a href="<?php echo $this->getUrl('customer/account/login') ?>"><?php echo $this->__('Login') ?></a >
         </li>
 
