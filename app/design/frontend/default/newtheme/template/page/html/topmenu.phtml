@@ -31,6 +31,11 @@
  * @see Mage_Page_Block_Html_Topmenu
  */
 ?>
+
+
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+
 <?php $_menu = $this->getHtml('level-top') ?>
 <?php if ($_menu): ?>
     <div class="nav-container">
@@ -41,22 +46,22 @@
                     <?php echo $this->__('Home'); ?>
                 </a>
             </li>
-            <li>
+            <li class="shop">
                 <a href="<?php echo $this->getUrl('electronics.html') ?>">
                     <?php echo $this->__('Shop'); ?>
                 </a>
-                <img src="<?php echo $this->getSkinUrl('images/newdown.png') ?>">
+                <img src="<?php echo $this->getSkinUrl('images/downarrow1.png') ?>">
             </li>
 
-            <li>
+            <li class="blog">
                 <a href="<?php echo $this->getUrl('') ?>">
                     <?php echo $this->__('Blog'); ?>
                 </a>
-                <img src="<?php echo $this->getSkinUrl('images/newdown.png') ?>">
+                <img src="<?php echo $this->getSkinUrl('images/downarrow1.png') ?>">
             </li>
             <?php //echo $_menu ?>
 
-            <li>
+            <li class="error">
                 <a href="<?php echo $this->getUrl('no-route') ?>">
                     <?php echo $this->__('404'); ?>
                 </a>
@@ -70,11 +75,12 @@
                 <input type="text" name="first_name" placeholder=" <?php echo $this->__('Search'); ?>" value="" class="input-text required-entry">
                 <button class="newsearch" data-toggle="dropdown" type="button">
 
-                    <a href=""><img src="<?php echo $this->getSkinUrl('images/seach.png') ?>" alt="" > </a>
+                    <a href=""><img src="<?php echo $this->getSkinUrl('images/search2.png') ?>" alt="" > </a>
                 </button> 
             </li>
 
         </ul>
     </div>
 
-    <?php endif ?>
+    <?php
+ endif ?>
