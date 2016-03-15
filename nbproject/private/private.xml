@@ -23,14 +23,20 @@
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/Model/Observer.php</file>
             <file>file:/var/www/html/etechmagento/skin/frontend/default/newtheme/css/styles.css</file>
             <file>file:/var/www/html/etechmagento/app/code/core/Mage/Core/Block/Abstract.php</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/page/2columns-left.phtml</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/etc/system.xml</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/controllers/Checkout/CartController.php</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/page/html/breadcrumbs.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/catalog/navigation/left.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/catalog/product/list.phtml</file>
             <file>file:/var/www/html/etechmagento/app/code/core/Mage/Catalog/Block/Product.php</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/page/html/topmenu.phtml</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/default/template/mydata/mydata.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/catalog/product/view.phtml</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/cms/content_heading.phtml</file>
             <file>file:/var/www/html/etechmagento/js/jquery/etech.js</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/page/1column.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/cms/widget/static_block/default.phtml</file>
         </group>
     </open-files>
 </project-private>

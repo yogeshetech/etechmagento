@@ -34,23 +34,84 @@
 <?php endif; ?>
 <div class="slider">
     <div class="left-slider">
+
+        <div class="slider-arrow">
+            <img src="<?php echo $this->getSkinUrl('images/sliderleft.jpeg') ?>">
+
+        </div>
+
+
+
         <div class="e-shopper">
 
             <p><span>E</span>-SHOPPER</p> 
 
         </div>
-        <h2 class="free">FREE E-COMMERCE TEMPLATE</h2>
+        <h2 class="free">Free E-commerce Template</h2>
         <p class="slider-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         </p>
-        
-        
+        <div class="get-it" >
+            <button class="" data-toggle="dropdown" type="button">
+                Get it now
+
+            </button> 
+        </div>
+
     </div>
     <div class="right-slider">
+        <div class="girl-image">
+            <img src="<?php echo $this->getSkinUrl('images/girl3.jpg') ?>">  
 
 
+        </div>
+        <div class="right-arraw">
+
+            <img src="<?php echo $this->getSkinUrl('images/sliderright.jpeg') ?>">  
+
+        </div>
+        <div class="offer-price">
+
+
+            <img src="<?php echo $this->getSkinUrl('images/pricing.png') ?>"> 
+        </div>
 
     </div>
 
+</div>
+<div class="clear">    </div>
+<div class="hr">   </div>
 
+<div class="left-sidebar">
+    <h2 class="cate" >CATEGORY</h2>
+    
+<div class="main-cat">
+
+    <?php
+    $obj = new Mage_Catalog_Block_Navigation();
+    $store_cats = $obj->getStoreCategories();
+    $current_cat = $obj->getCurrentCategory();
+    $current_cat = (is_object($current_cat) ? $current_cat->getName() : '');
+
+    foreach ($store_cats as $cat) {
+        if ($cat->getName() == $current_cat) {
+            echo '<li class="current"><a href="' . $this->getCategoryUrl($cat) . '">' . $cat->getName() . "</a>\n<ul>\n";
+            foreach ($obj->getCurrentChildCategories() as $subcat) {
+                echo '<li><a href="' . $this->getCategoryUrl($subcat) . '">' . $subcat->getName() . "</a></li>\n";
+            }
+            echo "</ul>\n</li>\n";
+        } else {
+            echo '<li><a href="' . $this->getCategoryUrl($cat) . '">' . $cat->getName() . "</a></li>\n";
+        }
+    }
+    ?>
+
+</div>
+    
+</div>
+
+<div class="right-sidebar">
+    
+        <h2 class="feature" >FEATURE ITEMS</h2>
+    
 </div>

@@ -12,7 +12,7 @@ class Etech_Mydata_Block_Catalog_Product_Price extends Mage_Catalog_Block_Produc
     public function getDisplayMinimalPrice()
     {
 		
-        echo "Block Override";
+        //echo "Block Override";
       return $this->_getData('display_minimal_price');
     }
 
