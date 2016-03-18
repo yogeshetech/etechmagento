@@ -71,16 +71,15 @@
                     <?php echo $this->__('Contact'); ?>
                 </a>
             </li>
-            <li class="search">
-                <input type="text" name="first_name" placeholder=" <?php echo $this->__('Search'); ?>" value="" class="input-text required-entry">
-                <button class="newsearch" data-toggle="dropdown" type="button">
-
-                    <a href=""><img src="<?php echo $this->getSkinUrl('images/search2.png') ?>" alt="" > </a>
-                </button> 
-            </li>
-
         </ul>
+
+        <div id="my-search" class="quick-access">
+            <?php echo $this->getChildHtml('topSearch') ?>
+
+        </div>  
     </div>
 
+
     <?php
+
  endif ?>
