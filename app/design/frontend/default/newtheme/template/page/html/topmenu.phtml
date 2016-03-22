@@ -39,19 +39,27 @@
 <?php $_menu = $this->getHtml('level-top') ?>
 <?php if ($_menu): ?>
     <div class="nav-container">
-        <ul id="nav">
+        <ul class="mainmenu" id="nav">
 
             <li class="nav-home">
                 <a href="<?php echo $this->getUrl('') ?>">
                     <?php echo $this->__('Home'); ?>
                 </a>
             </li>
-            <li class="shop">
-                <a href="<?php echo $this->getUrl('electronics.html') ?>">
+            <li id="shop" class="shop">
+                <a href="<?php echo $this->getUrl('#') ?>">
                     <?php echo $this->__('Shop'); ?>
                 </a>
                 <img src="<?php echo $this->getSkinUrl('images/downarrow1.png') ?>">
+
+                <ul class="subMenu">
+                   <?php echo $_menu ?>
+                </ul>
+
+
             </li>
+
+
 
             <li class="blog">
                 <a href="<?php echo $this->getUrl('') ?>">
@@ -75,11 +83,13 @@
 
         <div id="my-search" class="quick-access">
             <?php echo $this->getChildHtml('topSearch') ?>
-
+ 
         </div>  
+        
     </div>
 
 
     <?php
+
 
  endif ?>

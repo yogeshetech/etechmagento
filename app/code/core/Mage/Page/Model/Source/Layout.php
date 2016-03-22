@@ -99,4 +99,6 @@ class Mage_Page_Model_Source_Layout
         $this->getOptions();
         return $this->_defaultValue;
     }
+    
+    
 }

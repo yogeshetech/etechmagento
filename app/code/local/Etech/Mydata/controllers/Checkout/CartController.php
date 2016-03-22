@@ -8,7 +8,7 @@ class Etech_Mydata_Checkout_CartController extends Mage_Checkout_CartController 
 
         $this->loadLayout();
         $this->renderLayout();
-        echo "Overriding Controllers";
+       
     }
 
 }

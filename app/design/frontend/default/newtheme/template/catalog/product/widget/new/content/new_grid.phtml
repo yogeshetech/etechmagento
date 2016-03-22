@@ -76,24 +76,29 @@
                 <?php endif ?>
             <?php endforeach; ?>
 
-            <?php
-            $_helper = Mage::helper('catalog/category');
-            $_categories = Mage::getModel('catalog/category')->getCollection()
-                    ->addAttributeToSelect('name')
-                    ->addAttributeToSelect('is_active');
-            ?>
+             <?php
+    
+        $obj = new Mage_Catalog_Block_Navigation();
+        $store_cats = $obj->getStoreCategories();
+        $current_cat = $obj->getCurrentCategory();
+
+        $current_cat = (is_object($current_cat) ? $current_cat->getName() : '');
+
+
+        ?>
+
       
             <div class="new-menu">
 
 
                 <ul id="category-tab" class="">
 
-                    <?php foreach ($_categories as $_category): ?>
+                    <?php foreach ($obj->getCurrentChildCategories() as $subcat) { ?>
 
-                        <li> <a href="<?php echo $_helper->getCategoryUrl($_category); ?>">
-                                <?php echo $_category->getName(); ?>
+                        <li> <a href="<?php echo $subcat->getURL(); ?>">
+                                <?php echo $subcat->getName(); ?>
                             </a></li>
-                    <?php endforeach; ?>
+                    <?php } ?>
 
                 </ul>
 

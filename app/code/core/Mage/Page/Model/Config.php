@@ -127,4 +127,7 @@ class Mage_Page_Model_Config
 
         return $handles;
     }
+    
+  
+    
 }

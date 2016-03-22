@@ -140,19 +140,19 @@
                                 <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('T-Shirt'); ?>
                                     </a></li>
-                            <li><a href="<?php echo $this->getUrl('') ?>">
+                                <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('Mens'); ?>
                                     </a></li>
-                            <li><a href="<?php echo $this->getUrl('') ?>">
+                                <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('Womens'); ?>
                                     </a></li>
-                            <li><a href="<?php echo $this->getUrl('') ?>">
+                                <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('Gift Cards'); ?>
                                     </a></li>
-                            <li><a href="<?php echo $this->getUrl('') ?>">
+                                <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('Shoes'); ?>
                                     </a></li>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -160,23 +160,23 @@
                         <div class="single-widget">
                             <h2>Policies</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                 <li><a href="<?php echo $this->getUrl('customer-service') ?>">
+                                <li><a href="<?php echo $this->getUrl('customer-service') ?>">
                                         <?php echo $this->__('Terms of Use'); ?>
                                     </a></li>
-                             <li><a href="<?php echo $this->getUrl('customer-service') ?>">
+                                <li><a href="<?php echo $this->getUrl('customer-service') ?>">
                                         <?php echo $this->__('Privecy Policy'); ?>
                                     </a></li>
-                             <li><a href="<?php echo $this->getUrl('customer-service') ?>">
+                                <li><a href="<?php echo $this->getUrl('customer-service') ?>">
                                         <?php echo $this->__('Refund Policy'); ?>
                                     </a></li>
-                             <li><a href="<?php echo $this->getUrl('customer-service') ?>">
+                                <li><a href="<?php echo $this->getUrl('customer-service') ?>">
                                         <?php echo $this->__('Billing System'); ?>
                                     </a></li>
-                             <li><a href="<?php echo $this->getUrl('customer-service') ?>">
+                                <li><a href="<?php echo $this->getUrl('customer-service') ?>">
                                         <?php echo $this->__('Ticket System'); ?>
                                     </a></li>
-                            
-                                
+
+
                             </ul>
                         </div>
                     </div>
@@ -187,33 +187,32 @@
                                 <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('Company Information'); ?>
                                     </a></li>
-                            
-                                    <li><a href="<?php echo $this->getUrl('') ?>">
+
+                                <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('Careers'); ?>
                                     </a></li>
-                            
-                                    <li><a href="<?php echo $this->getUrl('') ?>">
+
+                                <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('Store Location'); ?>
                                     </a></li>
-                            
-                                    <li><a href="<?php echo $this->getUrl('') ?>">
+
+                                <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('Affillate Program'); ?>
                                     </a></li>
-                            
-                                    <li><a href="<?php echo $this->getUrl('') ?>">
+
+                                <li><a href="<?php echo $this->getUrl('') ?>">
                                         <?php echo $this->__('Copyright'); ?>
                                     </a></li>
-                            
-                               
+
+
                             </ul>
                         </div>
                     </div>
                     <div class="footer-search">
                         <div class="single-widget">
                             <h2>About Shopper</h2>
+                            <?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml(); ?>
                             <form class="searchform" action="#">
-                                <input type="text" placeholder="<?php echo $this->__('Enter your Email') ?>">
-                                <button class="btn btn-default" name="submit" type="submit"><img src="<?php echo $this->getSkinUrl('images/footersearch.png') ?>"></button>
                                 <p>Get the most recent updates from <br>our site and be updated your self...</p>
                             </form>
                         </div>
@@ -227,35 +226,27 @@
             <div class="container">
                 <div class="row">
                     <p class="pull-left"><?php echo $this->getCopyright() ?></p>
+                  
                     <p class="pull-right">Designed by <span><a href="http://www.magentocommerce.com/bug-tracking" target="_blank"><?php echo $this->__('Etech') ?></a></span></p>
                 </div>
             </div>
         </div>
-
+        <div><?php  //echo $this->getLayout()->createBlock('cms/block')->setBlockId('new_footer_link')->toHtml(); ?></div>
     </footer>
 
 
 
-
-
-
-
-
-
-
-
-
-
-<!--------
+    <!--------
 
     <div class="footer">
-        <?php// $data = $this->getChildHtml();
-       // print_r($data);
-        ?>
+    <?php
+   
+    // print_r($data);
+    ?>
 
 
-        <p class="bugs"><?php// echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target = '_blank'"><strong><?php// echo $this->__('Report All Bugs') ?></strong></a> <?php //echo $this->__('(ver. %s)', Mage::getVersion()) ?></p>
-        <address><?php// echo $this->getCopyright() ?></address>
+        <p class="bugs"><?php // echo $this->__('Help Us to Keep Magento Healthy')  ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target = '_blank'"><strong><?php // echo $this->__('Report All Bugs')  ?></strong></a> <?php //echo $this->__('(ver. %s)', Mage::getVersion())  ?></p>
+        <address><?php // echo $this->getCopyright()  ?></address>
     </div>
 </div>
 -------->

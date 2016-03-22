@@ -28,6 +28,8 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel" />
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
+                  
+
 <div id="container">
     <div id="example">
             <!-- <img src="img/new-ribbon.png" width="112" height="112" alt="New Ribbon" id="ribbon"> -->
@@ -193,7 +195,7 @@
     <div class="left-slider">
 
         <div class="slider-arrow">
-            <img src="<?php // echo $this->getSkinUrl('images/newleft.png')   ?>">
+            <img src="<?php // echo $this->getSkinUrl('images/newleft.png')      ?>">
 
         </div>
 
@@ -218,19 +220,19 @@
     </div>
     <div class="right-slider">
         <div class="girl-image">
-            <img src="<?php //echo $this->getSkinUrl('images/girl3.jpg')   ?>">  
+            <img src="<?php //echo $this->getSkinUrl('images/girl3.jpg')      ?>">  
 
 
         </div>
         <div class="right-arraw">
 
-            <img src="<?php //echo $this->getSkinUrl('images/arrowright.png')   ?>">  
+            <img src="<?php //echo $this->getSkinUrl('images/arrowright.png')      ?>">  
 
         </div>
         <div class="offer-price">
 
 
-            <img src="<?php //echo $this->getSkinUrl('images/pricing.png')   ?>"> 
+            <img src="<?php //echo $this->getSkinUrl('images/pricing.png')      ?>"> 
         </div>
 
     </div>
@@ -251,20 +253,23 @@
         $obj = new Mage_Catalog_Block_Navigation();
         $store_cats = $obj->getStoreCategories();
         $current_cat = $obj->getCurrentCategory();
+
         $current_cat = (is_object($current_cat) ? $current_cat->getName() : '');
 
-        foreach ($store_cats as $cat) {
-            if ($cat->getName() == $current_cat) {
-                echo '<li class="current"><a href="' . $this->getCategoryUrl($cat) . '">' . $cat->getName() . "</a>\n<ul>\n";
-                foreach ($obj->getCurrentChildCategories() as $subcat) {
-                    echo '<li><a href="' . $this->getCategoryUrl($subcat) . '">' . $subcat->getName() . "</a></li>\n";
-                }
-                echo "</ul>\n</li>\n";
-            } else {
-                echo '<li><a href="' . $this->getCategoryUrl($cat) . '">' . $cat->getName() . "</a></li>\n";
-            }
+
+        foreach ($obj->getCurrentChildCategories() as $subcat) {
+            echo '<li><a href="' . $subcat->getURL() . '">' . $subcat->getName() . "</a></li>\n";
         }
+        echo "</ul>\n</li>\n";
         ?>
+
+
+
+
+
+
+
+
 
     </div>
     <div class="range-bond" >
@@ -297,10 +302,11 @@
 
         <h2 class="pr-range" >PRICE RANGE</h2>
         <div class="range-slider" >
-            <div class="slider slider-horizontal" style="width: 180px;"><div class="slider-track"><div class="slider-selection" style="left: 41.6667%; width: 48.3333%;"></div><div class="slider-handle round left-round" style="left: 41.6667%;"></div><div class="slider-handle round" style="left: 90%;"></div></div><div class="" style="top: -30px; left: 28.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">250 : 545</div></div><input type="text" id="" data-slider-value="[250,450]" data-slider-step="5" data-slider-max="600" data-slider-min="0" value="" class="span2" style=""></div>
-            <br>
-            <b class="pull-left">0</b>
-            <b class="pull-right">600</b>
+            <p>
+                <label for="amount">Price range:</label>
+                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold">
+            </p>
+            <div id="slider-range"></div>
 
         </div>
 

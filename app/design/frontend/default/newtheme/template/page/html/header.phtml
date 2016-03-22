@@ -36,35 +36,12 @@
 
             <ul class="contact">
 
-                <li class="phone"><a href="news"><img src="<?php echo $this->getSkinUrl('images/phone2.png') ?>" alt="message" ><p><?php echo $this->__('+2 95 01 88 821') ?> </p></a></li> 
-                <li class="message"><a href="news"><img src="<?php echo $this->getSkinUrl('images/mess.png') ?>" alt="message" > </a><?php echo $this->__('info@domain.com') ?></li> 
+                <li class="phone"><a href="news"><img src="<?php echo $this->getSkinUrl('images/phone2.png') ?>" alt="message" ><p><?php echo Mage::getStoreConfig('general/store_information/phone'); ?> </p></a></li> 
+                <li class="message"><a href="news"><img src="<?php echo $this->getSkinUrl('images/mess.png') ?>" alt="message" > </a> <?php echo Mage::getStoreConfig('trans_email/ident_general/email'); ?></li> 
 
-            </ul>   
-            <div class="social-icon">  
-
-                <div  id="google" class="social-facebook">  
-                    <a href="news"><img src="<?php echo $this->getSkinUrl('images/gplus.png') ?>" alt="message" > </a>
-                </div>
-
-
-
-                <div id="neww" class="social-facebook">  
-                    <a class="new-icon" href="news"><img  src="<?php echo $this->getSkinUrl('images/new11.png') ?>" alt="message" > </a>
-                </div>
-
-                <div id="linkedin" class="social-facebook">  
-                    <a href="news"><img src="<?php echo $this->getSkinUrl('images/linkedinn.png') ?>" alt="message" > </a>
-                </div>
-
-                <div id="twitter" class="social-facebook">  
-                    <a href="news"><img src="<?php echo $this->getSkinUrl('images/twitter.png') ?>" alt="message" > </a>
-                </div>
-                <div id="facebook" class="social-facebook">  
-                    <a href="news"><img src="<?php echo $this->getSkinUrl('images/fbbb.png') ?>" alt="message" > </a>
-                </div>
-
-
-            </div>
+            </ul>  
+          
+         <?php echo $data= $this->getLayout()->createBlock('cms/block')->setBlockId('facebook_block')->toHtml(); ?>
 
         </div>
 
@@ -81,22 +58,38 @@
             <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif ?>
         <div class="country">
-            <button class="usa" data-toggle="dropdown" type="button">
-                <p>USA</p>
-                <a href=""><img src="<?php echo $this->getSkinUrl('images/arrow1.png') ?>" alt="" > </a>
-            </button> 
+            <?php
+            $_countries = $this->getCountry();
+            ?>
+            <?php if (count($_countries) > 0): ?>
+                <select class="country-list" name="country" id="country">
+                    
+                    <?php foreach ($_countries as $_country): ?>
+                        <option value="<?php echo $_country['value'] ?>">
+                            <?php echo $_country['label'] ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            <?php endif; ?>
+
+
+
+
+
         </div> 
+            
+        
 
         <div class="doller" >
-            <button class="" data-toggle="dropdown" type="button">
-                DOLLAR
-                <a href=""><img src="<?php echo $this->getSkinUrl('images/arrow1.png') ?>" alt="" > </a>
-            </button> 
+                    <?php
+              
+           echo $this->getChildHtml('custom_currency_selector') ;      
+    ?> 
         </div>
 
         <div class="quick-access">
-           <!-- <?php// echo $this->getChildHtml('topSearch') ?> -->
-           <!-- <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p> -->
+            <!-- <?php // echo $this->getChildHtml('topSearch')  ?> -->
+            <!-- <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p> -->
 
             <?php echo $this->getChildHtml('topLinks') ?>
 
@@ -106,3 +99,5 @@
     </div>
 </div>
 <?php echo $this->getChildHtml('topMenu') ?>
+
+

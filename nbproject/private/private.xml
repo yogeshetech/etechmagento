@@ -5,40 +5,54 @@
         <group>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/Model/Layer.php</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/Block/Catalog/Product/Price.php</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/layout/cms.xml</file>
             <file>file:/var/www/html/etechmagento/index.php</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/Model/Mysql4/Mydata.php</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/page/html/header.phtml</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/Model/Mydata.php</file>
+            <file>file:/var/www/html/etechmagento/js/jquery/jquery-ui.js</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/default/template/mydata/add.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/code/local/Excellence/Ajax/controllers/IndexController.php</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/page/html/footer.phtml</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/default/template/mydata/update.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/code/core/Mage/Checkout/controllers/CartController.php</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/controllers/IndexController.php</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/catalogsearch/form.mini.phtml</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/base/default/template/catalog/product/price.phtml</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/Model/Profile.php</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/Helper/Data.php</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/page/template/links.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/directory/currency.phtml</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/etc/config.xml</file>
             <file>file:/var/www/html/etechmagento/app/code/core/Mage/Customer/etc/system.xml</file>
+            <file>file:/var/www/html/etechmagento/app/code/core/Mage/Page/Block/Html/Header.php</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/Block/Mydata.php</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/base/default/layout/catalog.xml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/directory/currency-top.phtml</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/default/layout/mydata.xml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/newsletter/subscribe.phtml</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/Model/Observer.php</file>
             <file>file:/var/www/html/etechmagento/skin/frontend/default/newtheme/css/styles.css</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/layout/page.xml</file>
             <file>file:/var/www/html/etechmagento/app/code/core/Mage/Core/Block/Abstract.php</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/layout/local.xml</file>
             <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/etc/system.xml</file>
-            <file>file:/var/www/html/etechmagento/app/code/local/Etech/Mydata/controllers/Checkout/CartController.php</file>
+            <file>file:/var/www/html/etechmagento/js/jquery/noconflict.js</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/page/html/breadcrumbs.phtml</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/catalog/product/widget/new/content/new_grid.phtml</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/catalog/navigation/left.phtml</file>
-            <file>file:/var/www/html/etechmagento/app/code/core/Mage/Catalog/Block/Product/Widget/New.php</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/catalog/product/list.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/base/default/template/catalog/product/view.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/layout/newsletter.xml</file>
+            <file>file:/var/www/html/etechmagento/skin/frontend/default/newtheme/css/jquery-ui.css</file>
             <file>file:/var/www/html/etechmagento/app/code/core/Mage/Catalog/Block/Product.php</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/page/html/topmenu.phtml</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/default/template/mydata/mydata.phtml</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/cms/content_heading.phtml</file>
             <file>file:/var/www/html/etechmagento/js/jquery/etech.js</file>
             <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/template/reports/widget/viewed/content/viewed_grid.phtml</file>
+            <file>file:/var/www/html/etechmagento/app/design/frontend/default/newtheme/layout/catalog.xml</file>
         </group>
     </open-files>
 </project-private>

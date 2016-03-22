@@ -257,6 +257,17 @@ Product view
         <reference name="right">
             <block type="catalog/product_list_related" name="catalog.product.related" before="-" template="catalog/product/list/related.phtml"/>
         </reference>
+        
+       <reference name="head">
+            <action method="addItem"><type>js</type><name>jquery/jquery-1.12.1.min.js</name></action>
+            <action method="addItem"><type>js</type><name>jquery/noconflict.js</name></action>
+        </reference>
+
+                  
+                  
+                  
+        
+        
     </catalog_product_view>
 
 <!--
