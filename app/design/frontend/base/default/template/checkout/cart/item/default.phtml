@@ -29,6 +29,52 @@ $_item = $this->getItem();
 $isVisibleProduct = $_item->getProduct()->isVisibleInSiteVisibility();
 $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage_Catalog_Model_Product_Attribute_Source_Msrp_Type::TYPE_BEFORE_ORDER_CONFIRM);
 ?>
+ <script type="text/javascript">
+            var deleting = 0;
+            productRemoveFromCart = function(url, elem){
+                deleting = deleting + 1;
+                jQuery(elem).parent().parent().animate({ opacity: 0.5 }, 200, function() { });
+                if (!url) {
+                        //alert('Problem');
+                }
+                url = url.replace("checkout/cart","ajax/index");
+                if(window.location.protocol == "https:") {
+                    url = url.replace("http:","https:");
+                }
+                url += '&isAjax=1';
+                var data = 'isAjax=1';
+                try {
+                        jQuery.ajax( {
+                                url : url,
+                                dataType : 'json',
+                                type : 'post',
+                                data : data,
+                                success : function(data) {
+                                        deleting = deleting - 1;
+                                        if(deleting<1){
+                                            var pagepath = window.location.pathname;
+                                            if((pagepath.indexOf("onestepcheckout")>0)||(pagepath.indexOf("checkout/cart")>0)){
+                                              
+                                            }
+                                        }
+                                },
+                                error: function (data) {
+                                    deleting = deleting - 1;
+                                }
+                                }); 
+                } catch (e) {
+                }
+            }     
+    </script>
+
+
+
+
+
+
+
+
+
 <tr>
     <td><?php if ($this->hasProductUrl()):?><a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->escapeHtml($this->getProductName()) ?>" class="product-image"><?php endif;?><img src="<?php echo $this->getProductThumbnail()->resize(75); ?>" width="75" height="75" alt="<?php echo $this->escapeHtml($this->getProductName()) ?>" /><?php if ($this->hasProductUrl()):?></a><?php endif;?></td>
     <td>
@@ -277,5 +323,6 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
         <?php endif; ?>
     </td>
     <?php endif; ?>
-    <td class="a-center"><a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Remove item')) ?>" class="btn-remove btn-remove2"><?php echo $this->__('Remove item')?></a></td>
+
+    <td class="a-center"><a href="javascript:void(0)" onclick="productRemoveFromCart('<?php echo $this->getDeleteUrl(); ?>',this);" title="<?php echo $this->__('Remove item')?>" class="btn-remove btn-remove2"><?php echo $this->__('Remove item')?></a></td>
 </tr>
