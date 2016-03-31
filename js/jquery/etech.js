@@ -67,3 +67,7 @@ $( "#amount" ).val( "Rs   " + ui.values[ 0 ] + " - Rs" + ui.values[ 1 ] );
 $( "#amount" ).val( "Rs" + $( "#slider-range" ).slider( "values", 0 ) +
 " -     Rs" + $( "#slider-range" ).slider( "values", 1 ) );
 });
+
+
+
+

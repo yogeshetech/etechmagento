@@ -49,7 +49,29 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>mage/translate.js</script></action>
                 <action method="addJs"><script>mage/cookies.js</script></action>
 
+		   <action method="addJs">
+                    <script>jquery/js/jquery-1.4.4.min.js</script>
+                </action>
+              
+     
+                <action method="addJs">
+                    <script>jquery/js/slides.min.jquery.js</script>
+                </action>
+                          
+            
+                <action method="addJs">
+                    <script>jquery/etech.js</script>
+                </action>
+        
+                <action method="addJs">
+                    <script>jquery/jquery-ui.js</script>
+                </action>
+          
+
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
+		<action method="addCss">
+                    <stylesheet>css/jquery-ui.css</stylesheet>
+                </action>
 
                 <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>

@@ -57,6 +57,18 @@ class Mage_Adminhtml_Block_Widget_Grid_Container extends Mage_Adminhtml_Block_Wi
             'onclick'   => 'setLocation(\'' . $this->getCreateUrl() .'\')',
             'class'     => 'add',
         ));
+        
+        $this->_addButton('button1', array(
+            'label'     => Mage::helper('employee')->__('Button Label1'),
+            'onclick'   => 'setLocation(\'' . $this->getUrl('*/*/button1') .'\')',
+            'class'     => 'add',
+        ));
+        $this->_addButton('button2', array(
+            'label'     => Mage::helper('employee')->__('Button Label2'),
+            'onclick'   => 'setLocation(\'' . $this->getUrl('*/*/button2') .'\')',
+            'class'     => 'remove',
+        ));
+ 
     }
 
     protected function _prepareLayout()
@@ -105,4 +117,8 @@ class Mage_Adminhtml_Block_Widget_Grid_Container extends Mage_Adminhtml_Block_Wi
     {
         return 'width:50%;';
     }
+    
+    
+
+    
 }

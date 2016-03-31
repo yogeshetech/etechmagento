@@ -19,6 +19,12 @@
             <block type="cms/block" name="facebook_block" before="-"/>
             <block type="directory/currency" name="custom_currency_selector" template="directory/currency.phtml"/>
         </reference>
+       <reference name="header">
+           
+        <block  type="newslider/newslider" name="newslider" template="newslider/newslider.phtml" />
+       
+    </reference>
+   
 
         
    </default>
